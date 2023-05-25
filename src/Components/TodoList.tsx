@@ -36,6 +36,7 @@ const TodoList = () => {
   const [input, setInput] = useState("");
   const [filter, setFilter] = useState("all");
 
+  //Finished is not assigned to original data array, so it is not updated - with connection to backend it would be updated
   const handleTodoClick = (todoId: number) => {
     const updatedTodos = todos.map((todo) =>
       todo.id === todoId ? { ...todo, finished: !todo.finished } : todo
